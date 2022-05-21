@@ -32,12 +32,13 @@ section{
     padding: 50px 0;
 }
 
-i{
-    color: #c50341;
+a{
+    color: #ffffff;
+    text-decoration: none;
 }
 
-tbody tr:hover {
-    color: #bf0e4f;
+i{
+    color: #c50341;
 }
 
 hr{
@@ -48,6 +49,10 @@ hr{
 label{
     font-weight: 500;
     margin: 0 0 5px 0;
+}
+
+img{
+    max-width: fit-content;
 }
 
 .bg-grey{
@@ -64,8 +69,26 @@ label{
 .m-l-10{
     margin-left: 10px;
 }
+
+
 .m-r-10{
     margin-right: 10px;
+}
+
+@media (max-width:990px) {
+
+    .block{
+        margin-bottom: 20px;
+    }
+
+    .m-l-10{
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    img{
+        max-width: 100px;
+    }
 }
 
 /* Header ------------------------------------------------------------------------------------------------ */
@@ -80,6 +103,14 @@ header {
     font-family: 'Roboto', sans-serif;
 }
 
+.logo a:hover {
+    color: #ffffff;
+}
+
+.user a:hover {
+    color: #ffffff;
+}
+
 .user-image-header {
     background-color: #ffffff;
     border: 1px solid #f7f3f7;
@@ -88,13 +119,31 @@ header {
     width: 30px;
     height: 30px;
     font-weight: 500;
-    margin-left: 15px;
+    margin-left: 10px;
     justify-content: center;
     padding: 1px 0 0 0;
 }
 
+@media (max-width:990px) {
+    .title-page{
+        display: none;
+    }
+}
 
 /* Main ------------------------------------------------------------------------------------------------ */
+
+.btn-start{
+    background-image: linear-gradient(to bottom, #a7397b , #853481);
+    box-shadow: 1px 1px 4px #ffc6f6;
+    border: none;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.btn-start:hover{
+    color: #ffffff;
+}
+
 .blcok {
     margin: 0 10px;
 }
@@ -180,10 +229,16 @@ header {
     margin: 15px 0 0 0 ;
 }
 
+@media (max-width:990px) {
+    .pick-rate p{
+        margin: -5px 5px 25px 0 ;
+    }
+}
+
 .section-divider {
     position: relative;
     background-color: #ffffff;
-    margin: -15px -2px ;
+    margin: -15px 1px ;
     border: 1px solid #ffffff;
 }
 
@@ -204,6 +259,7 @@ header {
 }
 
 /* Footer ------------------------------------------------------------------------------------------------ */
+
 footer{
     background-color: #e9e3e9;
     padding: 10px 0;
@@ -213,6 +269,21 @@ footer .copyrights p{
     color: #817e81;
     margin: 0;
     text-align: center;
+}
+
+/* Data Tables Extra ------------------------------------------------------------------------------------------------ */
+
+table.dataTable tbody tr{
+    background-color: #ffffff !important;
+}
+table.dataTable tbody tr:hover{
+    background-color: #f7eef7 !important;
+    color: #c50341;
+    border: none !important;
+}
+
+.dataTables_filter, .dataTables_info, .dataTables_length, .dataTables_paginate { 
+    display: none;
 }
 
 
