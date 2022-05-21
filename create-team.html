@@ -9,13 +9,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css">
 
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let table = new DataTable('#myTeams');
-        });
-    </script>
-
   </head>
   <body>
     <header>
@@ -46,137 +39,28 @@
     <section id="content">
         <div class="container">
             <div class="row">
-                <div class="block col-12 col-md-6">
-                    <div id="my-teams">
+                <div class="block col-12">
+                    <div id="new-team">
 
-                        <div class="d-flex justify-content-between">
-                            <h2>My teams</h2>
-                            <button class="btn btn-start add-team">+</button>
+                        <div>
+                            <h2>Create your team</h2>
                         </div>
 
                         <hr>
 
-                        <table id="myTeams" class="display table">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="row">Barcelona</td>
-                                    <td>
-                                        <div class="d-flex justify-content-between">
-                                            <p class="m-0">Barcelona Squad</p>
-                                            <div class="actions-buttons d-flex">
-                                                <a href=""><i class="bi bi-trash2-fill"></i></a>
-                                                <a href=""><i class="bi bi-share-fill"></i></a>
-                                                <a href=""><i class="bi bi-pencil-fill"></i></a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Real Madrid</td>
-                                    <td>Real Madrid Squad</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-                </div>
-
-                <div class="block col-12 col-md-6">
-                    <div id="top">
-
-                        <div class="d-flex justify-content-between">
-                            <h2>Top 5</h2>
-                        </div>
-
-                        <hr>
-
-                        <div class="d-block d-sm-flex">
-                            <div class="age-data col-12 col-md-6 m-r-10">
-                                <label>Highest avg age</label>
-                                <div class="bg-grey age-big-box">
-
-                                    <div class="bg-white age-box">
-                                        <p class="team-name">Inter Milan</p>
-                                        <p class="high-avg-age">31.9</p>
-                                    </div>
-
-                                    <div class="bg-white age-box">
-                                        <p class="team-name">Inter Milan</p>
-                                        <p class="high-avg-age">31.9</p>
-                                    </div>
-
-                                    <div class="bg-white age-box">
-                                        <p class="team-name">Inter Milan</p>
-                                        <p class="high-avg-age">31.9</p>
-                                    </div>
-
-                                    <div class="bg-white age-box">
-                                        <p class="team-name">Inter Milan</p>
-                                        <p class="high-avg-age">31.9</p>
-                                    </div>
-
-                                    <div class="bg-white age-box m-0">
-                                        <p class="team-name">Inter Milan</p>
-                                        <p class="high-avg-age">31.9</p>
-                                    </div>
-
+                        <div class="team-information col-12"> 
+                            <h3>team information</h3>
+                            <div class="block d-block d-sm-flex col-12 p-t-10">
+                                <div class="col-12 col-md-6">
+                                    <label for="teamName">Team name</label><br>
+                                    <input type="text" name="teamName" placeholder="Insert team name">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="teamName">Team website</label><br>
+                                    <input type="text" name="teamName" placeholder="Insert team name">
                                 </div>
                             </div>
-
-                            <div class="age-data col-12 col-md-6 m-l-10">
-                                <label>Lowest avg age</label>
-                                <div class="bg-grey age-big-box">
-
-                                    <div class="bg-white age-box">
-                                        <p class="team-name">Inter Milan</p>
-                                        <p class="high-avg-age">31.9</p>
-                                    </div>
-
-                                    <div class="bg-white age-box">
-                                        <p class="team-name">Inter Milan</p>
-                                        <p class="high-avg-age">31.9</p>
-                                    </div>
-
-                                    <div class="bg-white age-box">
-                                        <p class="team-name">Inter Milan</p>
-                                        <p class="high-avg-age">31.9</p>
-                                    </div>
-
-                                    <div class="bg-white age-box">
-                                        <p class="team-name">Inter Milan</p>
-                                        <p class="high-avg-age">31.9</p>
-                                    </div>
-
-                                    <div class="bg-white age-box m-0">
-                                        <p class="team-name">Inter Milan</p>
-                                        <p class="high-avg-age">31.9</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="picked-player">
-
-                        <div class="choosen col-6">
-                            <h2 class="text-white">Most picked player</h2>
-                            <div class="pick-rate col-3 col-md-3"><p>75%</p></div>
-                            <img src="assets/img/player1.png" alt="Player Name">
-                        </div>
-
-                        <div class="section-divider"></div>
-
-                        <div class="choosen col-6">
-                            <h2 class="text-white">Less picked player</h2>
-                            <div class="pick-rate col-3 col-md-3"><p>25%</p></div>
-                            <img src="assets/img/player2.png" alt="Player Name">
+                            
                         </div>
 
                     </div>

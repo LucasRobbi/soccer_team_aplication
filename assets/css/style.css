@@ -28,6 +28,15 @@ h2 {
     margin: auto 0;
 }
 
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #8f8f8f;
+    font-size: 14px;
+    margin: auto 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 section{
     padding: 50px 0;
 }
@@ -51,6 +60,14 @@ label{
     margin: 0 0 5px 0;
 }
 
+input{
+    width: 100%;
+}
+
+input:focus{
+    border-color: #bf0e4f !important;
+}
+
 img{
     max-width: fit-content;
 }
@@ -70,9 +87,24 @@ img{
     margin-left: 10px;
 }
 
-
 .m-r-10{
     margin-right: 10px;
+}
+
+.p-b-10{
+    padding-bottom: 10px;
+}
+
+.p-t-10{
+    padding-top: 10px;
+}
+
+.p-r-5{
+    padding-right: 5px;
+}
+
+.p-l-5{
+    padding-left: 5px;
 }
 
 @media (max-width:990px) {
@@ -130,7 +162,7 @@ header {
     }
 }
 
-/* Main ------------------------------------------------------------------------------------------------ */
+/* Main  My Teams------------------------------------------------------------------------------------------------ */
 
 .btn-start{
     background-image: linear-gradient(to bottom, #a7397b , #853481);
@@ -144,14 +176,16 @@ header {
     color: #ffffff;
 }
 
-.blcok {
+.block {
     margin: 0 10px;
 }
+
 #my-teams{
     background-color: #ffffff;
     border-radius: 10px;
     padding: 15px;
 }
+
 .add-team{
     background-image: linear-gradient(to bottom, #a7397b , #853481);
     box-shadow: 1px 1px 4px #ffc6f6;
@@ -159,6 +193,7 @@ header {
     color: #ffffff;
     border-radius: 10px;
 }
+
 .add-team:hover{
     color: #ffffff;
 }
