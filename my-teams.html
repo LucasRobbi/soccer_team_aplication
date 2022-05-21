@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Teams - Squad Management Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css">
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let table = new DataTable('#myTeams');
+        });
+    </script>
+
+  </head>
+  <body>
+    <header>
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+
+                <div class="col logo">
+                    <img src="assets/img/venturus-logo.png" alt="Venturus Logo">
+                    <span class="title-page">Squad Management Tool</span>
+                </div>
+
+                <div class=" d-flex justify-content-end col user">
+                    <span>John Doe</span>
+                    <div class="d-flex user-image-header">
+                        <span>JD</span>
+                        <img src="assets/img/user.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="block col-12 col-md-6">
+                    <div id="my-teams">
+
+                        <div class="d-flex justify-content-between">
+                            <h2>My teams</h2>
+                            <button class="btn add-team">+</button>
+                        </div>
+
+                        <hr>
+
+                        <table id="myTeams" class="display table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Barcelona</td>
+                                    <td>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="m-0">Barcelona Squad</p>
+                                            <div class="actions-buttons d-flex">
+                                                <a href=""><i class="bi bi-trash2-fill"></i></a>
+                                                <a href=""><i class="bi bi-share-fill"></i></a>
+                                                <a href=""><i class="bi bi-pencil-fill"></i></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Real Madrid</td>
+                                    <td>Real Madrid Squad</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="block col-12 col-md-6">
+                    <div id="top">
+
+                        <div class="d-flex justify-content-between">
+                            <h2>Top 5</h2>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-block d-sm-flex">
+                            <div class="age-data col-12 col-lg -6 col-md-6 m-r-10">
+                                <label>Highest avg age</label>
+                                <div class="bg-grey age-big-box">
+
+                                    <div class="bg-white age-box">
+                                        <p class="team-name">Inter Milan</p>
+                                        <p class="high-avg-age">31.9</p>
+                                    </div>
+
+                                    <div class="bg-white age-box">
+                                        <p class="team-name">Inter Milan</p>
+                                        <p class="high-avg-age">31.9</p>
+                                    </div>
+
+                                    <div class="bg-white age-box">
+                                        <p class="team-name">Inter Milan</p>
+                                        <p class="high-avg-age">31.9</p>
+                                    </div>
+
+                                    <div class="bg-white age-box">
+                                        <p class="team-name">Inter Milan</p>
+                                        <p class="high-avg-age">31.9</p>
+                                    </div>
+
+                                    <div class="bg-white age-box m-0">
+                                        <p class="team-name">Inter Milan</p>
+                                        <p class="high-avg-age">31.9</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="age-data col-12 col-lg -6 col-md-6 m-l-10">
+                                <label>Lowest avg age</label>
+                                <div class="bg-grey age-big-box">
+
+                                    <div class="bg-white age-box">
+                                        <p class="team-name">Inter Milan</p>
+                                        <p class="high-avg-age">31.9</p>
+                                    </div>
+
+                                    <div class="bg-white age-box">
+                                        <p class="team-name">Inter Milan</p>
+                                        <p class="high-avg-age">31.9</p>
+                                    </div>
+
+                                    <div class="bg-white age-box">
+                                        <p class="team-name">Inter Milan</p>
+                                        <p class="high-avg-age">31.9</p>
+                                    </div>
+
+                                    <div class="bg-white age-box">
+                                        <p class="team-name">Inter Milan</p>
+                                        <p class="high-avg-age">31.9</p>
+                                    </div>
+
+                                    <div class="bg-white age-box m-0">
+                                        <p class="team-name">Inter Milan</p>
+                                        <p class="high-avg-age">31.9</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="picked-player">
+
+                        <div class="choosen col-12 col-md-6">
+                            <h2 class="text-white">Most picked player</h2>
+                            <div class="pick-rate col-md-3"><p>75%</p></div>
+                            <img src="assets/img/player1.png" alt="Player Name">
+                        </div>
+
+                        <div class="section-divider"></div>
+
+                        <div class="choosen col-12 col-md-6">
+                            <h2 class="text-white">Less picked player</h2>
+                            <div class="pick-rate col-md-3"><p>25%</p></div>
+                            <img src="assets/img/player2.png" alt="Player Name">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="copyrights">
+                    <p>2022 - All rights reserved</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    
+    <script src="assets/js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
