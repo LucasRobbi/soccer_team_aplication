@@ -60,6 +60,9 @@ a{
 i{
     color: #c50341;
 }
+i[title=Edit]{
+    border-radius: 2px;
+}
 
 hr{
     background-color: #f7eef7 !important;
@@ -129,13 +132,11 @@ select{
 .label-info{
     background-color: #bf0e4f !important;
     border-radius: 10px !important;
-    padding: 1px 5px 2px 5px;
+    padding: 1px 8px 2px 8px;
     line-height: 27px;
     margin-bottom: 5px;
-}
-
-img{
-    max-width: fit-content;
+    font-weight: 500;
+    font-size: 15px;
 }
 
 .bg-grey{ background-color: #e8e2e7; }
@@ -161,7 +162,7 @@ img{
 @media (max-width:767px) {
 
     .block{
-        margin-bottom: 20px;
+        margin: 0 0 20px 0 !important;
     }
 
     .p-l-5{
@@ -171,9 +172,6 @@ img{
 
     .m-l-20{ margin-left: 0px; }
 
-    img{
-        max-width: 100px;
-    }
 }
 
 /* Header ------------------------------------------------------------------------------------------------ */
@@ -304,6 +302,7 @@ header {
     text-align: center;
     border: 1px solid #ffffff;
     border-radius: 100%;
+    max-width: 100px;
     margin: -15px 0 0 0;
 }
 
@@ -359,9 +358,10 @@ header {
 }
 
 .field{
-    margin: 15px 20px;
+    margin: 15px auto;
     background-image: linear-gradient(to bottom, #ba3d7b , #642e86);
     height: 500px;
+    max-width: 400px;
     border-radius: 3px;  
 }
 
@@ -387,10 +387,12 @@ header {
     border: 1px solid #ffffff;
     position: relative;
     top: 200px;
+    max-width: 400px;
 }
 .save-formation{
-    margin: 0px 20px;
-    width: calc(100%- 40px);
+    margin: 0px auto;
+    width: 100%;
+    max-width: 400px;
 }
 
 .btn-save{
@@ -456,6 +458,9 @@ table.dataTable tbody tr:hover{
     background-color: #f7eef7 !important;
     color: #c50341;
     border: none !important;
+}
+table.dataTable tbody tr:hover + .actions-buttons a i {
+    color: #000000 !important;
 }
 
 .dataTables_filter, .dataTables_info, .dataTables_length, .dataTables_paginate { 
