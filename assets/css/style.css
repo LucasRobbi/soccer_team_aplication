@@ -16,6 +16,17 @@
 
 /* General ------------------------------------------------------------------------------------------------ */
 
+
+::selection{
+    background-color: #c50341;
+    color: #ffffff;
+}
+
+::placeholder{ 
+    color: #acacac;
+    padding-left: 10px;
+}
+
 body {
     background-color: #f7f3f7;
     min-height: 100vh;
@@ -60,52 +71,92 @@ label{
     margin: 0 0 5px 0;
 }
 
-input{
+input[type=radio]{
     width: auto;
 }
+input[type=radio]:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -4px;
+    left: -1px;
+    position: relative;
+    background-image: linear-gradient(to bottom, #bf0e4f , #682f87);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #adadad;
+    color: #bf0e4f;
+}
 
-input:focus{
-    border-color: #bf0e4f !important;
+input[type=text]{
+    width: 100% !important;
+    border: solid 1px #adadad;
+    border-radius: 2px;
+}
+
+.bootstrap-tagsinput{
+    width: 100% !important;
+    border: none !important;
+    padding: 5px !important;
+    border: solid 1px #adadad !important;
+    border-radius: 2px;
+}
+
+textarea{
+    width: 100%;
+    border: solid 1px #adadad;
+    border-radius: 2px;
+}
+
+input[type=text]:focus{
+    padding: none !important;
+    border: 1px solid #bf0e4f !important;
+    border-color: #ffffff;
+}
+
+select{
+    padding: 0 20px 0 10px;
+    border: solid 1px #adadad;
+}
+
+.bootstrap-tagsinput input[type=text]:focus{
+    padding: none !important;
+    border: none !important;
+    border-color: #ffffff;
+}
+
+.label-info{
+    background-color: #bf0e4f !important;
+    border-radius: 10px !important;
+    padding: 1px 5px 2px 5px;
+    line-height: 27px;
+    margin-bottom: 5px;
 }
 
 img{
     max-width: fit-content;
 }
 
-.bg-grey{
-    background-color: #e8e2e7;
-}
+.bg-grey{ background-color: #e8e2e7; }
+.bg-white{ background-color: #ffffff; }
 
-.bg-white{
-    background-color: #ffffff;
-}
+.m-0{ margin: 0; }
 
-.m-0{
-    margin: 0;
-}
-.m-l-10{
-    margin-left: 10px;
-}
+.m-l-10{ margin-left: 10px; }
+.m-l-20{ margin-left: 20px; }
 
-.m-r-10{
-    margin-right: 10px;
-}
+.m-r-10{ margin-right: 10px; }
 
-.p-b-10{
-    padding-bottom: 10px;
-}
+.p-b-10{ padding-bottom: 10px; }
 
-.p-t-10{
-    padding-top: 10px;
-}
+.p-t-10{ padding-top: 10px; }
+.p-t-20{ padding-top: 20px; }
+.p-t-30{ padding-top: 30px; }
 
-.p-r-5{
-    padding-right: 5px;
-}
+.p-r-5{ padding-right: 5px; }
 
-.p-l-5{
-    padding-left: 5px;
-}
+.p-l-5{ padding-left: 5px; }
 
 @media (max-width:767px) {
 
@@ -117,6 +168,8 @@ img{
         margin-left: 0px;
         margin-top: 20px;
     }
+
+    .m-l-20{ margin-left: 0px; }
 
     img{
         max-width: 100px;
@@ -287,7 +340,6 @@ header {
     position: absolute;
     top: calc(50% - 20px);
     left: -25px;
-    color: rgba(#2980b9, 0.5);
     line-height: 50px;
     text-indent: 10px;
     font-size: 15px;
@@ -301,11 +353,82 @@ header {
     padding: 15px;
 }
 
-::placeholder{ 
-    color: #acacac;
-    padding-left: 10px;
+.area {
+    display: block;
+    padding: 15px;
 }
 
+.field{
+    margin: 15px 20px;
+    background-image: linear-gradient(to bottom, #ba3d7b , #642e86);
+    height: 500px;
+    border-radius: 3px;  
+}
+
+.field-divider{
+    content: ""; 
+    width: 50px;
+    height: 50px;
+    float: auto;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 100%;
+    position: relative;
+    top: 225px;
+    left: calc(50% - 20px);
+    line-height: 50px;
+    text-indent: 10px;
+    font-size: 15px;
+}
+.field-divider2{
+    content: "";
+    float: auto;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    position: relative;
+    top: 200px;
+}
+.save-formation{
+    margin: 0px 20px;
+    width: calc(100%- 40px);
+}
+
+.btn-save{
+    background-image: linear-gradient(to bottom, #a7397b , #853481);
+    box-shadow: 1px 1px 4px #ffc6f6;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.resultSearch{
+    margin: 20px 0 ;
+}
+
+.playerSearched{
+    display: flex;
+    padding: 20px 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #fdfdfd , #e5e5e5);
+    margin-bottom: 10px;
+}
+
+.playerSearched p{
+    font-weight: 600;
+    margin: 0;
+}
+.playerSearched p span{
+    color: #c91a52;
+}
+
+@media (max-width:767px) {
+    
+    .field{
+        margin: 15px 0px;
+    }
+}
 /* Footer ------------------------------------------------------------------------------------------------ */
 
 footer{
@@ -334,7 +457,7 @@ table.dataTable tbody tr:hover{
     color: #c50341;
     border: none !important;
 }
+
 .dataTables_filter, .dataTables_info, .dataTables_length, .dataTables_paginate { 
     display: none;
 }
-
