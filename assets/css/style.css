@@ -360,35 +360,33 @@ header {
 .field{
     margin: 15px auto;
     background-image: linear-gradient(to bottom, #ba3d7b , #642e86);
+    background-image: url(../img/field.jpg);
+    background-size: cover;
     height: 500px;
     max-width: 400px;
-    border-radius: 3px;  
+    border-radius: 3px;
+    display: block;
+    justify-content: space-between;
+}
+.postion{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 0 ;
+    overflow: hidden;
+}
+.text-inside-postion{
+    content: "+";
 }
 
-.field-divider{
-    content: ""; 
-    width: 50px;
-    height: 50px;
-    float: auto;
-    color: #ffffff;
-    border: 1px solid #ffffff;
+.drop-zone-player{
+    border: #ffffff 2px dashed;
     border-radius: 100%;
-    position: relative;
-    top: 225px;
-    left: calc(50% - 20px);
-    line-height: 50px;
-    text-indent: 10px;
-    font-size: 15px;
+    width: 80px;
+    height: 80px;
+    background-color: #fdfdfd4a;
 }
-.field-divider2{
-    content: "";
-    float: auto;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    position: relative;
-    top: 200px;
-    max-width: 400px;
-}
+
 .save-formation{
     margin: 0px auto;
     width: 100%;
@@ -423,6 +421,10 @@ header {
 }
 .playerSearched p span{
     color: #c91a52;
+}
+
+.drop-zone-over{
+    opacity: 0.5;
 }
 
 @media (max-width:767px) {
