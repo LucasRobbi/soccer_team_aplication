@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
 /* API Football ------------------------------------------------------------------------------------------------ */
 
 var myHeaders = new Headers();
-myHeaders.append("x-rapidapi-key", "3e00b6948cddd21e1c9d5875a21b03fa");
+myHeaders.append("x-rapidapi-key", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 myHeaders.append("x-rapidapi-host", "v3.football.api-sports.io");
 
 fetch("https://v3.football.api-sports.io/players/seasons", {
     "method": "GET",
     "headers": {
         "x-rapidapi-host": "v3.football.api-sports.io",
-        "x-rapidapi-key": "3e00b6948cddd21e1c9d5875a21b03fa"
+        "x-rapidapi-key": "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
     }
 
 })
