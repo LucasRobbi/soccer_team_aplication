@@ -49,7 +49,7 @@
             <!-- team creation ---------------------------------------------------------------------------------------------------------------- -->
                 <div class="block col-12">
                     <div id="new-team">
-
+<form action="">
                         <div>
                             <h2>Create your team</h2>
                         </div>
@@ -69,7 +69,7 @@
                                 <div class="area col-12 col-md-6 ">
                                     <div>
                                         <label class="p-t-20" for="teamWebsite">Team website</label><br>
-                                        <input type="text" name="teamWebsite" placeholder="http://myteam.com">
+                                        <input type="url" id="teamWebsite" name="teamWebsite" placeholder="http://myteam.com"  pattern="(http|https)?://.+.+">
                                     </div>
                                     <div>
                                         <label class="p-t-20" for="teamType">Team type</label>
@@ -95,16 +95,16 @@
                                 <div class="area col-12 col-md-6">
                                     <label class="p-t-20 m-l-20" for="teamFormation">Formation</label>
                                     <select name="teamFormation" id="teamFormation">
-                                        <option value="3 - 2 - 2 - 3">3 - 2 - 2 - 3</option>
-                                        <option value="3 - 2 - 3 - 1">3 - 2 - 3 - 1</option>
-                                        <option value="3 - 4 - 3">3 - 4 - 3</option>
-                                        <option value="3 - 5 - 2">3 - 5 - 2</option>
-                                        <option value="4 - 2 - 3 - 1">4 - 2 - 3 - 1</option>
-                                        <option value="4 - 3 - 1 - 1">4 - 3 - 1 - 1</option>
-                                        <option value="4 - 3 - 2">4 - 3 - 2</option>
-                                        <option value="4 - 4 - 2">4 - 4 - 2</option>
-                                        <option value="4 - 5 - 1">4 - 5 - 1</option>
-                                        <option value="5 - 4 -1">5 - 4 -1</option>
+                                        <option value="3-2-2-3">3 - 2 - 2 - 3</option>
+                                        <option value="3-2-3-1">3 - 2 - 3 - 1</option>
+                                        <option value="3-4-3">3 - 4 - 3</option>
+                                        <option value="3-5-2">3 - 5 - 2</option>
+                                        <option value="4-2-3-1">4 - 2 - 3 - 1</option>
+                                        <option value="4-3-1-1">4 - 3 - 1 - 1</option>
+                                        <option value="4-3-2">4 - 3 - 2</option>
+                                        <option value="4-4-2">4 - 4 - 2</option>
+                                        <option value="4-5-1">4 - 5 - 1</option>
+                                        <option value="5-4-1">5 - 4 -1</option>
                                     </select>
 
                                     <div class="field">
@@ -154,11 +154,9 @@
                                     </div>
                                     
                                     <div class="save-formation">
-                                        <button class="btn btn-save">
-                                            Save 
-                                        </button>
+                                        <input class="btn btn-save" type="submit" value="Save">
                                     </div>
-
+                                </form>
                                 </div>
                                 <div class="area col-12 col-md-6 ">
                                     <div>
@@ -169,7 +167,7 @@
                                         
                                         <div class="playerSearched" draggable="true" id="myDraggableElement">
                                             <div class="col-10 m-0">
-                                                <p>Name: <span>Cristiano Ronaldo</span></p>
+                                                <p>Name: <span>Cris</span></p>
                                                 <p>Nacionality: <span>Portugal</span></p>
                                             </div>
                                             <div class="col-2 m-0">
@@ -179,7 +177,7 @@
 
                                         <div class="playerSearched" draggable="true" id="myDraggableElement2">
                                             <div class="col-10 m-0">
-                                                <p>Name: <span>Cristiano Ronaldo2</span></p>
+                                                <p>Name: <span>Cristiano</span></p>
                                                 <p>Nacionality: <span>Portugal</span></p>
                                             </div>
                                             <div class="col-2 m-0">
@@ -189,7 +187,7 @@
                                         
                                         <div class="playerSearched" draggable="true" id="myDraggableElement3">
                                             <div class="col-10 m-0">
-                                                <p>Name: <span>Cristiano Ronaldo3</span></p>
+                                                <p>Name: <span>Ronaldo</span></p>
                                                 <p>Nacionality: <span>Portugal</span></p>
                                             </div>
                                             <div class="col-2 m-0">

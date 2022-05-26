@@ -60,7 +60,7 @@ a{
 i{
     color: #c50341;
 }
-i[title=Edit]{
+i[title="Edit"]{
     border-radius: 2px;
 }
 
@@ -74,10 +74,10 @@ label{
     margin: 0 0 5px 0;
 }
 
-input[type=radio]{
+input[type="radio"]{
     width: auto;
 }
-input[type=radio]:checked:after {
+input[type="radio"]:checked:after {
     width: 15px;
     height: 15px;
     border-radius: 15px;
@@ -92,7 +92,12 @@ input[type=radio]:checked:after {
     color: #bf0e4f;
 }
 
-input[type=text]{
+input[type="text"]{
+    width: 100% !important;
+    border: solid 1px #adadad;
+    border-radius: 2px;
+}
+input[type="url"]{
     width: 100% !important;
     border: solid 1px #adadad;
     border-radius: 2px;
@@ -112,10 +117,13 @@ textarea{
     border-radius: 2px;
 }
 
-input[type=text]:focus{
+input[type="text"]:focus:after{
     padding: none !important;
     border: 1px solid #bf0e4f !important;
     border-color: #ffffff;
+}
+input[type="text"]:focus + label[for="teamName"]{
+    color: #bf0e4f !important;
 }
 
 select{
@@ -123,7 +131,7 @@ select{
     border: solid 1px #adadad;
 }
 
-.bootstrap-tagsinput input[type=text]:focus{
+.bootstrap-tagsinput input[type="text"]:focus{
     padding: none !important;
     border: none !important;
     border-color: #ffffff;
@@ -385,6 +393,7 @@ header {
     width: 80px;
     height: 80px;
     background-color: #fdfdfd4a;
+    overflow: hidden;
 }
 
 .save-formation{
@@ -425,6 +434,13 @@ header {
 
 .drop-zone-over{
     opacity: 0.5;
+}
+
+.overrideIni{
+    display: block;
+    background-image: none;
+    background-color: #e5e5e555 !important;
+    color: #bf0e4f;
 }
 
 @media (max-width:767px) {
