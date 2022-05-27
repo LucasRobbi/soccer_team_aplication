@@ -100,6 +100,21 @@ const draggableElement3 = document.querySelector("#myDraggableElement3");
         });
     }
 
+    function formationChange(){
+        var player = '<div class="drop-zone-player"><div class="text-inside-position"></div></div>';
+        var formationValue = 3214;
+        
+        for(var i = 0; i < 4; i++){
+            var positionOpen = '<div id="position'+ i +'" class="position"></div>';
 
+            const teste = document.getElementById("field");
+            teste.appendChild(positionOpen);
 
+            for(var j = 0; j < 3; j++ ){
+                const teste2 = document.getElementById("position" + i);
+                teste2.appendChild(player);
+            }
+
+        }
+    }
 
