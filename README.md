@@ -1,4 +1,2 @@
 # soccer_team_aplication
 
-https://portal.kenoby.com/teste?mapping=62716c1574ccf0650bd45fa7&token=80152f1d4fd660922102606c262bec662d6b85873686450c162cdce8376f97af86ebbd832e9ac0dd1ea3c37120fab0497a78b916d5bcc21087afe091e44acb7b&position=626ab616fc61a817b1e6fcb8&jobsite=venturus&tenant=5a7b22fdc05f7b6ec22037da&stageId=626fd180aee3e5796de6c4eb&originalTest=5fd2ac13961c0248908b9fa9
-
