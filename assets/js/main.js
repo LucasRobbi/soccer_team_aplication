@@ -111,7 +111,7 @@ const draggableElement3 = document.querySelector("#myDraggableElement3");
     function formationChange(){
         cleanFormation();
         let player = '<div class="drop-zone-player"><div class="text-inside-position"></div></div>';
-        let goalKeeper = '<div class="position goalkeeper"><div class="drop-zone-player"><div class="text-inside-postion"></div></div></div>'
+        let goalKeeper = '<div class="position"><div class="drop-zone-player"><div class="text-inside-postion"></div></div></div>'
         let value = $("#teamFormation").val().toString();
 
         $('.field').append(goalKeeper);
