@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
 /* API Football ------------------------------------------------------------------------------------------------ */
 
 var myHeaders = new Headers();
-myHeaders.append("x-rapidapi-key", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+myHeaders.append("x-rapidapi-key", "3e00b6948cddd21e1c9d5875a21b03fa");
 myHeaders.append("x-rapidapi-host", "v3.football.api-sports.io");
 
 fetch("https://v3.football.api-sports.io/players/seasons", {
     "method": "GET",
     "headers": {
         "x-rapidapi-host": "v3.football.api-sports.io",
-        "x-rapidapi-key": "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        "x-rapidapi-key": "3e00b6948cddd21e1c9d5875a21b03fa"
     }
 
 })
@@ -100,21 +100,27 @@ const draggableElement3 = document.querySelector("#myDraggableElement3");
         });
     }
 
-    function formationChange(){
-        var player = '<div class="drop-zone-player"><div class="text-inside-position"></div></div>';
-        var formationValue = 3214;
-        
-        for(var i = 0; i < 4; i++){
-            var positionOpen = '<div id="position'+ i +'" class="position"></div>';
+    $( document ).ready(function() {
+         formationChange();
+    });
 
-            const teste = document.getElementById("field");
-            teste.appendChild(positionOpen);
-
-            for(var j = 0; j < 3; j++ ){
-                const teste2 = document.getElementById("position" + i);
-                teste2.appendChild(player);
-            }
-
-        }
+    function cleanFormation(){
+        $('.field').html("");
     }
 
+    function formationChange(){
+        cleanFormation();
+        let player = '<div class="drop-zone-player"><div class="text-inside-position"></div></div>';
+        let goalKeeper = '<div class="position goalkeeper"><div class="drop-zone-player"><div class="text-inside-postion"></div></div></div>'
+        let value = $("#teamFormation").val().toString();
+
+        $('.field').append(goalKeeper);
+        for(var i = 0; i < value.length; i++){
+            var positionOpen = '<div id="position'+ i +'" class="position"></div>';
+            $('.field').append(positionOpen);
+            for(var j = 0; j < value.charAt(i); j++ ){
+                $("#position" + i).append(player);
+            }
+        }
+        
+    }
