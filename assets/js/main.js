@@ -60,13 +60,8 @@ function is_url(str)
 
     function formationChange(){
         cleanFormation();
-<<<<<<< Updated upstream
-        let player = '<div class="drop-zone-player"><div class="text-inside-position"></div></div>';
-        let goalKeeper = '<div class="position"><div class="drop-zone-player"><div class="text-inside-postion"></div></div></div>'
-=======
         let player = '<div class="drop-zone-player"></div>';
         let goalKeeper = '<div class="position goalkeeper"><div class="drop-zone-player"></div></div>';
->>>>>>> Stashed changes
         let value = $("#teamFormation").val().toString();
 
         value = reverseString(value);

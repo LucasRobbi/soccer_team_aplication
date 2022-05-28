@@ -110,16 +110,8 @@
                                     <div class="field"></div>
                                     
                                     <div class="save-formation">
-<<<<<<< Updated upstream:create-team.html
-                                        <input class="btn btn-save" type="submit" value="Save" onclick="window.location.href='soccer_team_aplication/my-teams.html'">
-                                    </div>
-                                    
-                                </form>
-=======
                                         <input class="btn btn-save" type="submit" value="Save" onclick="window.location.href='/soccer_team_aplication/my-teams.php'">
                                     </div>
-
->>>>>>> Stashed changes:create-team.php
                                 </div>
 
                                 <div class="area col-12 col-md-6 ">

@@ -52,11 +52,7 @@
 
                         <div class="d-flex justify-content-between">
                             <h2>My teams</h2>
-<<<<<<< Updated upstream:my-teams.html
-                            <button class="btn add-team" onclick="window.location.href='/soccer_team_aplication/create-team.html'">+</button>
-=======
                             <button class="btn add-team" onclick="window.location.href='/soccer_team_aplication/create-team.php'">+</button>
->>>>>>> Stashed changes:my-teams.php
                         </div>
 
                         <hr>

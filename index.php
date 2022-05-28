@@ -49,11 +49,7 @@
             <div class="row">
 
                 <div class="col-12 text-center">
-<<<<<<< Updated upstream:index.html
-                    <button class="btn btn-start" onclick="window.location.href='/soccer_team_aplication/my-teams.html'">My Teams</button>
-=======
                     <button class="btn btn-start" onclick="window.location.href='/soccer_team_aplication/my-teams.php'">My Teams</button>
->>>>>>> Stashed changes:index.php
                 </div>
 
             </div>
