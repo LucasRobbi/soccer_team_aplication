@@ -1,3 +1,4 @@
+<?php include 'connect.php';?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -49,7 +50,6 @@
             <!-- team creation ---------------------------------------------------------------------------------------------------------------- -->
                 <div class="block col-12">
                     <div id="new-team">
-<form action="">
                         <div>
                             <h2>Create your team</h2>
                         </div>
@@ -88,7 +88,7 @@
                             
                         </div>
 
-      <!-- squad configuration ---------------------------------------------------------------------------------------------------------------- -->
+                        <!-- squad configuration ---------------------------------------------------------------------------------------------------------------- -->
                         <div class="team-information col-12 p-t-30"> 
                             <h3>configure squad</h3>
                             <div class="d-block d-sm-flex col-12">
@@ -110,47 +110,64 @@
                                     <div class="field"></div>
                                     
                                     <div class="save-formation">
+<<<<<<< Updated upstream:create-team.html
                                         <input class="btn btn-save" type="submit" value="Save" onclick="window.location.href='soccer_team_aplication/my-teams.html'">
                                     </div>
                                     
                                 </form>
+=======
+                                        <input class="btn btn-save" type="submit" value="Save" onclick="window.location.href='/soccer_team_aplication/my-teams.php'">
+                                    </div>
+
+>>>>>>> Stashed changes:create-team.php
                                 </div>
+
                                 <div class="area col-12 col-md-6 ">
+
                                     <div>
                                         <label class="p-t-20" for="searchPlayers">Search players</label><br>
                                         <input type="text" name="searchPlayers">
                                     </div>
+
                                     <div class="resultSearch">
+                                        <?php 
+                                        $consultForSearch = $connection->query("SELECT * FROM player ORDER BY id_player ASC");
+                                        $count = $consultForSearch->rowCount();
+                                        if ($count == "0"){
+
+                                        }else{
+
+                                            while ($line = $consultForSearch->fetch(PDO::FETCH_ASSOC)) {
+
+                                        ?>
                                         
-                                        <div class="playerSearched" draggable="true" id="myDraggableElement">
+                                        <div class="playerSearched" draggable="true" id="myDraggableElement<?php echo $line['id_player']?>">
                                             <div class="col-10 m-0">
-                                                <p>Name: <span>Cris</span></p>
-                                                <p>Nacionality: <span>Portugal</span></p>
+                                                <p>Name: <span><?php echo $line['name_player']?></span></p>
+                                                <p>Nacionality: <span><?php echo $line['country_player']?></span></p>
                                             </div>
                                             <div class="col-2 m-0">
-                                                <p>Age: <span>32</span></p>
+                                                
+                                                <?php 
+                                                    
+                                                    $dateOfBirth = $line['birth_player'];
+                                                    $today = date("d-m-Y");
+                                                    $diff = date_diff(date_create($dateOfBirth), date_create($today));
+
+                                                ?>
+                                                
+                                                <p>Age: <span><?php echo $diff->format('%y')?></span></p>
+                                                
                                             </div>
                                         </div>
 
-                                        <div class="playerSearched" draggable="true" id="myDraggableElement2">
-                                            <div class="col-10 m-0">
-                                                <p>Name: <span>Cristiano</span></p>
-                                                <p>Nacionality: <span>Portugal</span></p>
-                                            </div>
-                                            <div class="col-2 m-0">
-                                                <p>Age: <span>32</span></p>
-                                            </div>
-                                        </div>
+                                        <?php 
+                                            
+                                            }
+                                        }
+
+                                        ?>
                                         
-                                        <div class="playerSearched" draggable="true" id="myDraggableElement3">
-                                            <div class="col-10 m-0">
-                                                <p>Name: <span>Ronaldo</span></p>
-                                                <p>Nacionality: <span>Portugal</span></p>
-                                            </div>
-                                            <div class="col-2 m-0">
-                                                <p>Age: <span>32</span></p>
-                                            </div>
-                                        </div>
 
                                     </div>
 
@@ -178,7 +195,74 @@
             </div>
         </div>
     </footer>
-    
+
+    <script>
+
+        /* DROPZONE PLAYERS*/
+        <?php 
+
+            $consultForJS = $connection->query("SELECT * FROM player ORDER BY id_player ASC");
+            $count = $consultForJS->rowCount();
+            if ($count == "0"){
+
+            }else{
+
+                while ($line2 = $consultForJS->fetch(PDO::FETCH_ASSOC)) {
+
+            ?>
+            const draggableElement<?php echo $line2['id_player'];?> = document.querySelector("#myDraggableElement<?php echo $line2['id_player'];?>");
+
+            draggableElement<?php echo $line2['id_player'];?>.addEventListener("dragstart", e => {
+                e.dataTransfer.setData("text/plain", draggableElement<?php echo $line2['id_player'];?>.id);
+            });
+        
+        <?php 
+                
+            }
+        }
+
+        ?>
+
+        for (const dropZone of document.querySelectorAll(".drop-zone-player")){
+
+            dropZone.addEventListener("dragover", e => {
+                e.preventDefault();
+                dropZone.classList.add("drop-zone-over");
+            });
+
+            dropZone.addEventListener("dragleave", e => {
+                dropZone.classList.remove("drop-zone-over");
+            });
+
+            dropZone.addEventListener("drop", e => {
+                e.preventDefault();
+                const droppedElementId = e.dataTransfer.getData("text/plain");
+                const droppedElement =  document.getElementById(droppedElementId);
+
+                dropZone.appendChild(droppedElement);
+                dropZone.classList.remove("drop-zone-over");
+            });
+        }
+
+        for (const playerDroped of document.querySelectorAll(".playerSearched")){
+
+            playerDroped.addEventListener("dragleave", e => {
+                playerDroped.classList.add("overrideIni");
+            });
+
+            playerDroped.addEventListener("drop", e => {
+                e.preventDefault();
+                const droppedElementId = e.dataTransfer.getData("text/plain");
+                const droppedElement =  document.getElementById(droppedElementId);
+                playerDroped.classList.add("overrideIni");
+
+                playerDroped.appendChild(droppedElement);
+                playerDroped.classList.remove("drop-zone-over");
+            });
+        }
+
+    </script>
+
     <script src="assets/js/main.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

@@ -1,3 +1,4 @@
+<?php include 'connect.php';?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +9,12 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
   </head>
   <body>
     <!-- top bar + begging button + user ---------------------------------------------------------------------------------------------------------------- -->
@@ -43,7 +49,11 @@
             <div class="row">
 
                 <div class="col-12 text-center">
+<<<<<<< Updated upstream:index.html
                     <button class="btn btn-start" onclick="window.location.href='/soccer_team_aplication/my-teams.html'">My Teams</button>
+=======
+                    <button class="btn btn-start" onclick="window.location.href='/soccer_team_aplication/my-teams.php'">My Teams</button>
+>>>>>>> Stashed changes:index.php
                 </div>
 
             </div>

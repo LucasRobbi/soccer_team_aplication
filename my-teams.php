@@ -1,14 +1,19 @@
+<?php include 'connect.php';?>
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Teams - Squad Management Tool</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
   </head>
   <body>
@@ -47,7 +52,11 @@
 
                         <div class="d-flex justify-content-between">
                             <h2>My teams</h2>
+<<<<<<< Updated upstream:my-teams.html
                             <button class="btn add-team" onclick="window.location.href='/soccer_team_aplication/create-team.html'">+</button>
+=======
+                            <button class="btn add-team" onclick="window.location.href='/soccer_team_aplication/create-team.php'">+</button>
+>>>>>>> Stashed changes:my-teams.php
                         </div>
 
                         <hr>
@@ -60,38 +69,41 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <div class="mostra">
-                                    <tr>
-                                        <td scope="row">Barcelona</td>
-                                        <td>
-                                            <div class="d-flex justify-content-between">
-                                                <p class="m-0">Barcelona Squad</p>
-                                                <!-- edit team --------------------------------------------- -->
-                                                <div class="actions-buttons">
-                                                    <a href=""><i class="bi bi-trash2-fill" title="Delete"></i></a>
-                                                    <a href=""><i class="bi bi-share-fill" title="Share"></i></a>
-                                                    <a href=""><i class="bi bi-pencil-fill" title="Edit"></i></a>
-                                                </div>
+                                
+                                <!-- DATA BASE CONSULT TO BRING INFORMATION -->
+                                <?php 
+
+                                $consult = $connection->query("SELECT * FROM team ORDER BY name_team ASC");
+                                $count = $consult->rowCount();
+                                if ($count == "0"){
+
+                                }else{
+
+                                    while ($line = $consult->fetch(PDO::FETCH_ASSOC)) {
+
+                                ?>
+
+                                <tr>
+                                    <td scope="row"><?php echo $line['name_team'];?></td>
+                                    <td>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="m-0"><?php echo $line['description_team'];?></p>
+                                            <!-- edit team --------------------------------------------- -->
+                                            <div class="actions-buttons">
+                                                <a href=""><i class="bi bi-trash2-fill" title="Delete"></i></a>
+                                                <a href=""><i class="bi bi-share-fill" title="Share"></i></a>
+                                                <a href="/soccer_team_aplication/edit-team.php"><i class="bi bi-pencil-fill" title="Edit"></i></a>
                                             </div>
-                                        </td>
-                                    </tr>
-                                </div>
-                                <div class="mostra">
-                                    <tr>
-                                        <td scope="row">Real Madrid</td>
-                                        <td>
-                                            <div class="d-flex justify-content-between">
-                                                <p class="m-0">Real Madrid Squad</p>
-                                                <!-- edit team --------------------------------------------- -->
-                                                <div class="actions-buttons">
-                                                    <a href=""><i class="bi bi-trash2-fill" title="Delete"></i></a>
-                                                    <a href=""><i class="bi bi-share-fill" title="Share"></i></a>
-                                                    <a href=""><i class="bi bi-pencil-fill" title="Edit"></i></a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <?php 
+                                    
+                                    }
+                                }
+
+                                ?>
                                 
                             </tbody>
                         </table>
@@ -218,7 +230,9 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>

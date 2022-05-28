@@ -388,9 +388,6 @@ header {
     padding: 10px 0 ;
     overflow: hidden;
 }
-.text-inside-position{
-    content: "+";
-}
 
 .drop-zone-player{
     border: #ffffff 2px dashed;
@@ -418,6 +415,34 @@ header {
 
 .resultSearch{
     margin: 20px 0 ;
+    width: 100%;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #cdcdcd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #a7397b;border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #853481;border-radius: 5px;
 }
 
 .playerSearched{
@@ -441,17 +466,20 @@ header {
     opacity: 0.5;
 }
 
-.overrideIni{
+#field + .overrideIni{
     display: block;
     background-image: none;
     background-color: #e5e5e555 !important;
     color: #bf0e4f;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
 }
 
 @media (max-width:767px) {
     
     .field{
-        margin: 15px 0px;
+        margin: 15px auto;
     }
 }
 /* Footer ------------------------------------------------------------------------------------------------ */
