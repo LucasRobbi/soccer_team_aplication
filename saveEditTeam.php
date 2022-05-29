@@ -35,17 +35,17 @@ if(isset($_POST["saveEditTeam"])){
     $positionTeamValue10 = $_POST['positionTeamValue10'];
     $playerPosition10    = $_POST['playerPosition10'];
 
-    $teamMembers  = "0".$playerPosition0."-".$positionTeamValue0.",";
-    $teamMembers .= "1".$playerPosition1."-".$positionTeamValue1.",";
-    $teamMembers .= "2".$playerPosition2."-".$positionTeamValue2.",";
-    $teamMembers .= "3".$playerPosition3."-".$positionTeamValue3.",";
-    $teamMembers .= "4".$playerPosition4."-".$positionTeamValue4.",";
-    $teamMembers .= "5".$playerPosition5."-".$positionTeamValue5.",";
-    $teamMembers .= "6".$playerPosition6."-".$positionTeamValue6.",";
-    $teamMembers .= "7".$playerPosition7."-".$positionTeamValue7.",";
-    $teamMembers .= "8".$playerPosition8."-".$positionTeamValue8.",";
-    $teamMembers .= "9".$playerPosition9."-".$positionTeamValue9.",";
-    $teamMembers .= "10".$playerPosition10."-".$positionTeamValue10.",";
+    $teamMembers  = "".$playerPosition0."-".$positionTeamValue0.",";
+    $teamMembers .= "".$playerPosition1."-".$positionTeamValue1.",";
+    $teamMembers .= "".$playerPosition2."-".$positionTeamValue2.",";
+    $teamMembers .= "".$playerPosition3."-".$positionTeamValue3.",";
+    $teamMembers .= "".$playerPosition4."-".$positionTeamValue4.",";
+    $teamMembers .= "".$playerPosition5."-".$positionTeamValue5.",";
+    $teamMembers .= "".$playerPosition6."-".$positionTeamValue6.",";
+    $teamMembers .= "".$playerPosition7."-".$positionTeamValue7.",";
+    $teamMembers .= "".$playerPosition8."-".$positionTeamValue8.",";
+    $teamMembers .= "".$playerPosition9."-".$positionTeamValue9.",";
+    $teamMembers .= "".$playerPosition10."-".$positionTeamValue10.",";
 
 	$data = mysqli_real_escape_string($connect, $_POST["saveTeam"]);
 	$query = "UPDATE team SET name_team = '$teamName', description_team = '$teamDescription', website_team = '$teamWebsite', type_team = '$teamType', tags_team = '$teamTags', formation_team = '$teamFormation', members_team = '$teamMembers' WHERE id_team = '$teamId'";

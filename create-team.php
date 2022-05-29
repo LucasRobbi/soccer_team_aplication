@@ -65,17 +65,17 @@
                                     <input type="text" name="teamName" placeholder="Insert team name" required>
 
                                     <label class="p-t-20" for="teamDescription">Description</label><br>
-                                    <textarea type="text" name="teamDescription" rows="6" required></textarea>
+                                    <textarea type="text" name="teamDescription" rows="6"></textarea>
                                 </div>
                                 <div class="area col-12 col-md-6 ">
                                     <div>
                                         <label class="p-t-20" for="teamWebsite">Team website</label><br>
-                                        <input type="url" id="teamWebsite" name="teamWebsite" placeholder="http://myteam.com"  pattern="(http|https)?://.+.+">
+                                        <input type="url" id="teamWebsite" name="teamWebsite" placeholder="http://myteam.com" pattern="(http|https)?://.+.+" required>
                                     </div>
                                     <div>
                                         <label class="p-t-20" for="teamType">Team type</label>
                                         <div>
-                                            <input type="radio" name="teamType" value="1"> <label id="real" for="teamType">Real</label>
+                                            <input type="radio" name="teamType" value="1" required> <label id="real" for="teamType">Real</label>
                                             <input type="radio" name="teamType" value="0"> <label id="fantasy" for="teamType">Fantasy</label>
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@
                             <div class="d-block d-sm-flex col-12">
                                 <div class="area col-12 col-md-6">
                                     <label class="p-t-20 m-l-20" for="teamFormation">Formation</label>
-                                    <select name="teamFormation" id="teamFormation" onchange="formationChange()">
+                                    <select name="teamFormation" id="teamFormation" onchange="formationChange()" required>
                                         <option value="3223">3 - 2 - 2 - 3</option>
                                         <option value="3231">3 - 2 - 3 - 1</option>
                                         <option value="343">3 - 4 - 3</option>

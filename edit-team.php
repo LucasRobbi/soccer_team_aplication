@@ -93,12 +93,12 @@
                                     <input type="text" name="teamName" placeholder="Team Name" value="<?php echo $line['name_team'];?>" required>
 
                                     <label class="p-t-20" for="teamDescription">Description</label><br>
-                                    <textarea type="text" name="teamDescription" rows="6" required><?php echo $line['description_team'];?></textarea>
+                                    <textarea type="text" name="teamDescription" rows="6"><?php echo $line['description_team'];?></textarea>
                                 </div>
                                 <div class="area col-12 col-md-6 ">
                                     <div>
                                         <label class="p-t-20" for="teamWebsite">Team website</label><br>
-                                        <input type="url" id="teamWebsite" name="teamWebsite" placeholder="http://myeam.com" value="<?php echo $line['website_team'];?>"  pattern="(http|https)?://.+.+">
+                                        <input type="url" id="teamWebsite" name="teamWebsite" placeholder="http://myeam.com" value="<?php echo $line['website_team'];?>"  pattern="(http|https)?://.+.+" required>
                                     </div>
                                     <div>
                                         <label class="p-t-20" for="teamType">Team type</label>
@@ -142,7 +142,7 @@
                             <div class="d-block d-sm-flex col-12">
                                 <div class="area col-12 col-md-6">
                                     <label class="p-t-20 m-l-20" for="teamFormation">Formation</label>
-                                    <select name="teamFormation" id="teamFormation" onchange="formationChange()">
+                                    <select name="teamFormation" id="teamFormation" onchange="formationChange()" required>
                                         <option value="<?php echo $line['formation_team'];?>"><?php echo $formation;?></option>
                                         <option value="3223">3 - 2 - 2 - 3</option>
                                         <option value="3231">3 - 2 - 3 - 1</option>
