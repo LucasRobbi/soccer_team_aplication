@@ -1,17 +1,5 @@
 <?php
 
-// include 'connect.php';
-
-//INFORMAÇÕES DO BANCO
-// $host = "localhost"; //computador onde o servidor de banco de dados esta instalado
-// $user = "root"; //seu usuario para acessar o banco
-// $pass = ""; //senha do usuario para acessar o banco
-// $db = "soccer_team_app"; //banco que deseja acessar
-
-// $connection = new PDO('mysql:host='.$host.';dbname='.$db.';charset=utf8', $user, $pass);
-// $connection->exec("set names utf8");
-// $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 $connect = mysqli_connect("localhost", "root", "", "soccer_team_app");
 $output = '';
 
@@ -29,9 +17,10 @@ if(isset($_POST["query"])){
 $result = mysqli_query($connect, $query);
 
 if(mysqli_num_rows($result) > 0){
-
+    $try = 0;
 	while($row = mysqli_fetch_array($result)){
 
+        $playerId = $row["id_player"];
         $playerName = $row["name_player"];
         $playerCountry = $row["country_player"];
         $playerBirth = $row["birth_player"];
@@ -41,7 +30,7 @@ if(mysqli_num_rows($result) > 0){
         $age = $diff->format("%y");
 
 		$output .= '
-            <div class="playerSearched" draggable="true">
+            <div id="playerPosition'.$try.'" name="playerPosition'.$try.'" value="'.$playerId.'" class="playerSearched" draggable="true">
                 <div class="col-10 m-0">
                     <p>Name: <span>'.$playerName.'</span></p>
                     <p>Nacionality: <span>'.$playerCountry.'</span></p>
@@ -51,6 +40,7 @@ if(mysqli_num_rows($result) > 0){
                 </div>
             </div>
 		';
+        $try ++;
 	}
 
 	echo $output;

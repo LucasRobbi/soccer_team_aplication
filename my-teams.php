@@ -86,9 +86,9 @@
                                             <p class="m-0"><?php echo $line['description_team'];?></p>
                                             <!-- edit team --------------------------------------------- -->
                                             <div class="actions-buttons">
-                                                <a href=""><i class="bi bi-trash2-fill" title="Delete"></i></a>
+                                                <a href="/soccer_team_aplication/deleteTeam.php?id_team=<?php echo $line['id_team']; ?>"><i class="bi bi-trash2-fill" title="Delete"></i></a>
                                                 <a href=""><i class="bi bi-share-fill" title="Share"></i></a>
-                                                <a href="/soccer_team_aplication/edit-team.php"><i class="bi bi-pencil-fill" title="Edit"></i></a>
+                                                <a href="/soccer_team_aplication/edit-team.php?id_team=<?php echo $line['id_team']; ?>"><i class="bi bi-pencil-fill" title="Edit"></i></a>
                                             </div>
                                         </div>
                                     </td>

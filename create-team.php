@@ -60,11 +60,12 @@
                             <h3>team information</h3>
                             <div class="d-block d-sm-flex col-12">
                                 <div class="area col-12 col-md-6">
+<form method="POST" name="saveTeam" action="saveCreateTeam.php">
                                     <label class="p-t-20" for="teamName">Team name</label><br>
-                                    <input type="text" name="teamName" placeholder="Insert team name">
+                                    <input type="text" name="teamName" placeholder="Insert team name" required>
 
                                     <label class="p-t-20" for="teamDescription">Description</label><br>
-                                    <textarea type="text" name="teamDescription" rows="6"></textarea>
+                                    <textarea type="text" name="teamDescription" rows="6" required></textarea>
                                 </div>
                                 <div class="area col-12 col-md-6 ">
                                     <div>
@@ -74,8 +75,8 @@
                                     <div>
                                         <label class="p-t-20" for="teamType">Team type</label>
                                         <div>
-                                            <input type="radio" name="teamType"> <label id="real" for="teamType">Real</label>
-                                            <input type="radio" name="teamType"> <label id="fantasy" for="teamType">Fantasy</label>
+                                            <input type="radio" name="teamType" value="1"> <label id="real" for="teamType">Real</label>
+                                            <input type="radio" name="teamType" value="0"> <label id="fantasy" for="teamType">Fantasy</label>
                                         </div>
                                     </div>
                                     <div>
@@ -110,10 +111,10 @@
                                     <div class="field"></div>
                                     
                                     <div class="save-formation">
-                                        <input class="btn btn-save" type="submit" value="Save" onclick="window.location.href='/soccer_team_aplication/my-teams.php'">
+                                        <input class="btn btn-save" type="submit" name="saveCreateTeam" formaction="saveCreateTeam.php" value="Save">
                                     </div>
                                 </div>
-
+</form>
                                 <div class="area col-12 col-md-6 ">
 
                                     <div>

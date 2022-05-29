@@ -71,15 +71,19 @@ function formationChange(){
         $('.field').append(positionOpen);
 
         for(var j = 0; j < value.charAt(i); j++ ){
-            $("#position" + i).append('<div id="positionTeamValue'+positionTeamValue+'" class="drop-zone-player" data-draggable="target"></div>');
+            $("#position" + i).append('<div id="positionTeamValue'+positionTeamValue+'" name="positionTeamValue'+positionTeamValue+'" class="drop-zone-player" data-draggable="target"></div>');
             positionTeamValue ++;
         }
     }
-    $('.field').append('<div class="position goalkeeper"><div id="positionTeamValue'+positionTeamValue+'" class="drop-zone-player" data-draggable="target"></div></div>');
+    $('.field').append('<div class="position goalkeeper"><div id="positionTeamValue'+positionTeamValue+'" name="positionTeamValue'+positionTeamValue+'" class="drop-zone-player" data-draggable="target"></div></div>');
 
     
 }
 
+// function overlay(){
+//     var cookieValue = document.getElementById('playerPosition0').getAttribute('value');
+//     alert(cookieValue);
+// }
 
 (function(){
 
@@ -124,10 +128,9 @@ function formationChange(){
             e.target.appendChild(item);
             
             e.preventDefault();
-
         }
     
-    }, false);
+    },false);
     
     //dragend event to clean-up after drop or abort
     //which fires whether or not the drop target was valid
