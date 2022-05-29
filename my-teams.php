@@ -69,13 +69,13 @@
                                 <!-- DATA BASE CONSULT TO BRING INFORMATION -->
                                 <?php 
 
-                                $consult = $connection->query("SELECT * FROM team ORDER BY name_team ASC");
-                                $count = $consult->rowCount();
+                                $consultTeams = $connection->query("SELECT * FROM team ORDER BY name_team ASC");
+                                $count = $consultTeams->rowCount();
                                 if ($count == "0"){
 
                                 }else{
 
-                                    while ($line = $consult->fetch(PDO::FETCH_ASSOC)) {
+                                    while ($line = $consultTeams->fetch(PDO::FETCH_ASSOC)) {
 
                                 ?>
 
