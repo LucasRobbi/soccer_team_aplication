@@ -1,8 +1,5 @@
 Phase 1
 
-3 Ability to Create/Edit and Remove a team.
-3.1.1 All fields but description and tags are mandatory.
-
 4.0 Ability to see what player was the most/less picked on.
 4.1 Replace images by player initials.
 
@@ -11,7 +8,7 @@ Phase 1
 Phase 2
 
 2. 2* Whenever a user is added to a position, it's initials must be displayed. i.e. Cristiano Ronaldo (CR) / Zinedine Yazid Zidane (ZZ)
-3.  Save must store the team's players into application state.
+
 
 Phase 3
 

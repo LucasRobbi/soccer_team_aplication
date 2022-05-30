@@ -1,34 +1,3 @@
-
-
-/* DATA TABLE -------------------------------------------------------------------------------------------------- */
-
-document.addEventListener('DOMContentLoaded', function () {
-    let table = new DataTable('#myTeams');
-});
-
-
-
-/* API Football ------------------------------------------------------------------------------------------------ */
-
-// var myHeaders = new Headers();
-// myHeaders.append("x-rapidapi-key", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-// myHeaders.append("x-rapidapi-host", "v3.football.api-sports.io");
-
-// fetch("https://v3.football.api-sports.io/players/seasons", {
-//     "method": "GET",
-//     "headers": {
-//         "x-rapidapi-host": "v3.football.api-sports.io",
-//         "x-rapidapi-key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-//     }
-
-// })
-// .then(response => {
-// 	console.log(response);
-// })
-// .catch(err => {
-// 	console.log(err);
-// });
-
 /* VALIDATION URL WEBSITE TEAM*/
 
 function is_url(str)
@@ -47,7 +16,7 @@ function is_url(str)
 
 /* SQUAD FORMATION */
 $( document ).ready(function() {
-        formationChange();
+        // formationChange();
         load_data();
 });
 
@@ -71,19 +40,26 @@ function formationChange(){
         $('.field').append(positionOpen);
 
         for(var j = 0; j < value.charAt(i); j++ ){
-            $("#position" + i).append('<div id="positionTeamValue'+positionTeamValue+'" name="positionTeamValue'+positionTeamValue+'" class="drop-zone-player" data-draggable="target"></div>');
+            $("#position" + i).append('<div id="positionTeamValue'+positionTeamValue+'" data-id="positionTeamValue'+positionTeamValue+'" class="drop-zone-player" data-draggable="target"></div>');
             positionTeamValue ++;
         }
     }
-    $('.field').append('<div class="position goalkeeper"><div id="positionTeamValue'+positionTeamValue+'" name="positionTeamValue'+positionTeamValue+'" class="drop-zone-player" data-draggable="target"></div></div>');
+    $('.field').append('<div class="position goalkeeper"><div id="positionTeamValue'+positionTeamValue+'" data-id="positionTeamValue'+positionTeamValue+'" class="drop-zone-player" data-draggable="target"></div></div>');
 
-    
 }
 
-// function overlay(){
-//     var cookieValue = document.getElementById('playerPosition0').getAttribute('value');
-//     alert(cookieValue);
-// }
+function sendData(){
+    let sendTeamFormation = ""
+    $('.drop-zone-player').each(function(){
+        let positionID = $(this).attr('data-id')
+        let playerID = $(this).children('.playerSearched').attr('data-id')
+        if(playerID != undefined){
+            sendTeamFormation += positionID.toString() + "-" + playerID.toString() + ","
+        }
+    })
+    $('#teamFormationMembers').val(sendTeamFormation)
+    
+}
 
 (function(){
 
@@ -128,6 +104,7 @@ function formationChange(){
             e.target.appendChild(item);
             
             e.preventDefault();
+            
         }
     
     },false);
@@ -137,7 +114,7 @@ function formationChange(){
     document.addEventListener('dragend', function(e) {
 
         item = null;
-    
+        sendData();
     }, false);
 
 })();	
@@ -166,3 +143,16 @@ $('#searchPlayers').keyup(function(){
         load_data();			
     }
 });
+
+function showPlayer() {
+    $('.initials').removeClass( "show" );
+    $('.initials').addClass( "hide" );
+    $('.playerSearchead').removeClass( "hide" );
+    $('.playerSearchead').addClass( "show" );
+}
+function showInitals() {
+    $('.playerSearchead').removeClass( "show" );
+    $('.playerSearchead').addClass( "hide" );
+    $('.initials').removeClass( "hide" );
+    $('.initials').addClass( "show" );
+}

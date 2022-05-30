@@ -1,5 +1,6 @@
 <?php
 
+
 $connect = mysqli_connect("localhost", "root", "", "soccer_team_app");
 $output = '';
 
@@ -29,8 +30,19 @@ if(mysqli_num_rows($result) > 0){
         
         $age = $diff->format("%y");
 
+        $words = explode(" ", $playerName);
+        
+        //this will give you the first word of the $words array , which is the first name
+        $firtsName = reset($words); 
+        
+        //this will give you the last word of the $words array , which is the last name
+        $lastName  = end($words);
+        
+        substr($firtsName,0,1); // this will echo the first letter of your first name
+        substr($lastName ,0,1); // this will echo the first letter of your last name
+
 		$output .= '
-            <div id="playerPosition'.$try.'" name="playerPosition'.$try.'" value="'.$playerId.'" class="playerSearched" draggable="true">
+            <div id="playerPosition'.$try.'" name="playerPosition'.$try.'"  data-id="'.$playerId.'" class="playerSearched" draggable="true" ondrag="showInitials()">
                 <div class="col-10 m-0">
                     <p>Name: <span>'.$playerName.'</span></p>
                     <p>Nacionality: <span>'.$playerCountry.'</span></p>
@@ -38,6 +50,9 @@ if(mysqli_num_rows($result) > 0){
                 <div class="col-2 m-0">
                     <p>Age: <span>'.$age.'</span></p>
                 </div>
+            </div>
+            <div id="playerPositionInitial'.$try.'" class="initials" draggable="true" >
+                <span class="initialsDesign">'.$firtsName[0].''.$lastName[0].'</span>
             </div>
 		';
         $try ++;

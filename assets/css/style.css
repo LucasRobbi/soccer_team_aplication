@@ -529,3 +529,29 @@ table.dataTable tbody tr:hover + .actions-buttons a i {
 .dataTables_filter, .dataTables_info, .dataTables_length, .dataTables_paginate { 
     display: none;
 }
+
+.hide{
+    display: none !important;
+}
+.show{
+    display: flex !important;
+}
+
+.initials{
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+    display: none;
+    border-radius: 100%;
+}
+
+.initialsDesign{
+    color: #bf0e4f;
+    font-size: 40px;
+    line-height: 75px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}

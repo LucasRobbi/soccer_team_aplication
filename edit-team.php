@@ -159,6 +159,7 @@
                                     <div class="field"></div>
                                     
                                     <div class="save-formation">
+                                        <input hidden name="teamMembers" id="teamFormationMembers" value="<?php echo $line['members_team'];?>">
                                         <input class="btn btn-save" type="submit" name="saveEditTeam" formaction="saveEditTeam.php" value="Save">
                                     </div>
                                 </div>
@@ -195,7 +196,13 @@
             </div>
         </div>
     </footer>
+    <script>
 
+    $( document ).ready(function() {
+        formationChange(); 
+    });
+
+    </script>
     <script src="assets/js/main.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
