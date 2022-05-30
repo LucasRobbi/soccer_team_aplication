@@ -106,7 +106,6 @@ function sendData(){
             e.preventDefault();
             
         }
-    
     },false);
     
     //dragend event to clean-up after drop or abort
@@ -143,16 +142,3 @@ $('#searchPlayers').keyup(function(){
         load_data();			
     }
 });
-
-function showPlayer() {
-    $('.initials').removeClass( "show" );
-    $('.initials').addClass( "hide" );
-    $('.playerSearchead').removeClass( "hide" );
-    $('.playerSearchead').addClass( "show" );
-}
-function showInitals() {
-    $('.playerSearchead').removeClass( "show" );
-    $('.playerSearchead').addClass( "hide" );
-    $('.initials').removeClass( "hide" );
-    $('.initials').addClass( "show" );
-}
