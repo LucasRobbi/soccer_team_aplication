@@ -8,7 +8,7 @@ After download your .zip file from GitHub.
 
 You can use XAMPP to create a localhost (or another similar program with similar function).
 
-Install the database (with phpAdmin in case you used XAMPP) that is located on assets/data/soccer_team_app.sql.
+Install/Import the database (with phpAdmin in case you use XAMPP) that is located on assets/data/soccer_team_app.sql.
 
 Alocate all content of zipfile on specifc archive (e.g.: C:\xampp\htdocs\soccer_team_aplication).
 
