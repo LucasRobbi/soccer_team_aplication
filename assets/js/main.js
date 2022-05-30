@@ -1,4 +1,6 @@
-/* VALIDATION URL WEBSITE TEAM*/
+
+
+/* VALIDATION TEAM URL WEBSITE*/
 
 function is_url(str)
 {
@@ -34,20 +36,22 @@ function formationChange(){
 
     value = reverseString(value);
     let positionTeamValue = 0;
-
+        // CREATE AREA TO PLAYERS
     for(var i = 0; i < value.length; i++){
         var positionOpen = '<div id="position'+ i +'" class="position"></div>';
         $('.field').append(positionOpen);
 
+        // CREATE SPECIF AREA FOR PLAYERS
         for(var j = 0; j < value.charAt(i); j++ ){
             $("#position" + i).append('<div id="positionTeamValue'+positionTeamValue+'" data-id="positionTeamValue'+positionTeamValue+'" class="drop-zone-player" data-draggable="target"></div>');
             positionTeamValue ++;
         }
     }
+    // CREATE GOALKEEPER
     $('.field').append('<div class="position goalkeeper"><div id="positionTeamValue'+positionTeamValue+'" data-id="positionTeamValue'+positionTeamValue+'" class="drop-zone-player" data-draggable="target"></div></div>');
 
 }
-
+// JOIN INFORMATION TEAM TO DEND TO DATABASE 
 function sendData(){
     let sendTeamFormation = ""
     $('.drop-zone-player').each(function(){
@@ -61,6 +65,7 @@ function sendData(){
     
 }
 
+// DRAG AND DROP FUNCTION
 (function(){
 
     //exclude older browsers by the features we need them to support
@@ -118,6 +123,7 @@ function sendData(){
 
 })();	
 
+// LOAD INFORMATION TO ANOTHER FILE TO INSERT ON DATABASE
 function load_data(query)
 {
     $.ajax({
@@ -131,6 +137,7 @@ function load_data(query)
     });
 }
 
+//SEARCH PLAYER
 $('#searchPlayers').keyup(function(){
     var search = $(this).val();
     if(search != '')

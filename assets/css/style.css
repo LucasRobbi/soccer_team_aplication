@@ -1,12 +1,3 @@
-/*
-
-## Main colors ------------------------------------------------------------------------------------------------
-
-#pink                   = #c50341
-#light-purple           = #bf0e4f
-#purple                 = #682f87
-
-*/
 
 /* Fonts ------------------------------------------------------------------------------------------------ */
 
@@ -176,6 +167,13 @@ select{
 .p-r-5{ padding-right: 5px; }
 
 .p-l-5{ padding-left: 5px; }
+
+.hide{
+    display: none !important;
+}
+.show{
+    display: flex !important;
+}
 
 @media (max-width:767px) {
 
@@ -363,7 +361,7 @@ header {
     font-size: 15px;
 }
 
-/* Add team ------------------------------------------------------------------------------------------------ */
+/* Create team / Edit team ------------------------------------------------------------------------------------------------ */
 
 #new-team{
     background-color: #ffffff;
@@ -487,6 +485,32 @@ header {
     border-radius: 100%;
 }
 
+.initials{
+    width: 80px;
+    height: 80px;
+    background-color: #e5e5e5;
+    display: none;
+    border-radius: 100%;
+}
+
+.initialsDesign{
+    color: #bf0e4f;
+    font-size: 40px;
+    line-height: 75px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.drop-zone-player div .playerSearched2{
+    display: none;
+}
+.drop-zone-player div .initials{
+    display: flex;
+}
+
 @media (max-width:767px) {
     
     .field{
@@ -528,37 +552,4 @@ table.dataTable tbody tr:hover + .actions-buttons a i {
 
 .dataTables_filter, .dataTables_info, .dataTables_length, .dataTables_paginate { 
     display: none;
-}
-
-.hide{
-    display: none !important;
-}
-.show{
-    display: flex !important;
-}
-
-.initials{
-    width: 80px;
-    height: 80px;
-    background-color: #e5e5e5;
-    display: none;
-    border-radius: 100%;
-}
-
-.initialsDesign{
-    color: #bf0e4f;
-    font-size: 40px;
-    line-height: 75px;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.drop-zone-player div .playerSearched2{
-    display: none;
-}
-.drop-zone-player div .initials{
-    display: flex;
 }

@@ -1,9 +1,9 @@
 <?php
 
-
 $connect = mysqli_connect("localhost", "root", "", "soccer_team_app");
 $output = '';
 
+// VERIFY QUERY FOR PROTECTION
 if(isset($_POST["query"])){
 
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
@@ -19,28 +19,28 @@ $result = mysqli_query($connect, $query);
 
 if(mysqli_num_rows($result) > 0){
     $try = 0;
+
+    // CONSULT TO SEE IF PLAYER EXISTS
 	while($row = mysqli_fetch_array($result)){
 
         $playerId = $row["id_player"];
         $playerName = $row["name_player"];
         $playerCountry = $row["country_player"];
         $playerBirth = $row["birth_player"];
+        
+        // CALCULATE THE AGE FROM BIRTH DATE
         $today = date("d-m-Y");
         $diff = date_diff(date_create($playerBirth), date_create($today));
-        
         $age = $diff->format("%y");
 
+        // MAKE INITIAL FOR FIELD
         $words = explode(" ", $playerName);
-        
-        //this will give you the first word of the $words array , which is the first name
         $firtsName = reset($words); 
-        
-        //this will give you the last word of the $words array , which is the last name
         $lastName  = end($words);
-        
-        substr($firtsName,0,1); // this will echo the first letter of your first name
-        substr($lastName ,0,1); // this will echo the first letter of your last name
+        substr($firtsName,0,1);
+        substr($lastName ,0,1);
 
+        // MAKE THE DIV PLAYER FOR SEARCH
 		$output .= '
         
             <div class="playerSearched" id="playerPosition'.$try.'" name="playerPosition'.$try.'" class="teste" title="'.$playerName.', '.$age.' years old - Origin Country: '.$playerCountry.'" draggable="true" data-id="'.$playerId.'">
