@@ -7,7 +7,7 @@ $output = '';
 if(isset($_POST["query"])){
 
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
-	$query = "SELECT * FROM player WHERE name_player LIKE '%$search%' OR country_player LIKE '%$search%' ORDER BY name_player ASC";
+	$query = "SELECT * FROM player WHERE name_player LIKE '%$search%' ORDER BY name_player ASC";
 
 }else{
 
