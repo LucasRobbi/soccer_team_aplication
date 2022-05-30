@@ -8,7 +8,7 @@ After download your .zip file from GitHub.
 
 You can use XAMPP to create a localhost (or another similar program with similar function).
 
-Install/Import the database (with phpAdmin in case you use XAMPP) that is located on assets/data/soccer_team_app.sql.
+Install/Import the database (with phpAdmin in case you use XAMPP) that is located on assets/data/soccer_team_app.sql. (Data come from: "https://www.footballdatabase.eu/en/players", i have charged the top 10 for each position Goalkeeper, Full Back, Central Defender, Central Midfielder, Offensive Midfielder and Forward)
 
 Alocate all content of zipfile on specifc archive (e.g.: C:\xampp\htdocs\soccer_team_aplication).
 

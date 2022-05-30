@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Maio-2022 às 17:07
+-- Tempo de geração: 30-Maio-2022 às 18:15
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -124,8 +124,8 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id_team`, `name_team`, `description_team`, `website_team`, `type_team`, `tags_team`, `formation_team`, `members_team`) VALUES
-(1, 'Barcelona FC', 'Barcelona FC Squad', 'https://www.fcbarcelona.com/', 1, 'Pass,Ofensive', 352, 'positionTeamValue0-6,positionTeamValue1-10,positionTeamValue2-5,positionTeamValue3-7,positionTeamValue4-9,positionTeamValue5-2,positionTeamValue6-11,positionTeamValue7-1,positionTeamValue8-4,positionTeamValue9-8,positionTeamValue10-3,'),
-(2, 'Real Madrid CF', 'Real Madrid CF Squad', 'https://www.realmadrid.com/pt', 1, 'Champion', 4231, 'positionTeamValue0-10,positionTeamValue1-7,positionTeamValue2-2,positionTeamValue3-11,positionTeamValue4-5,positionTeamValue5-6,positionTeamValue6-9,positionTeamValue7-8,positionTeamValue8-3,positionTeamValue9-1,positionTeamValue10-4,');
+(1, 'Barcelona FC', 'Barcelona FC Squad', 'https://www.fcbarcelona.com/', 1, 'Pass,Ofensive', 352, 'positionTeamValue0-20,positionTeamValue1-23,positionTeamValue2-19,positionTeamValue3-15,positionTeamValue4-22,positionTeamValue5-31,positionTeamValue6-4,positionTeamValue7-35,positionTeamValue8-21,positionTeamValue9-25,positionTeamValue10-27,'),
+(2, 'Real Madrid CF', 'Real Madrid CF Squad', 'https://www.realmadrid.com/pt', 1, 'Champion', 442, 'positionTeamValue0-28,positionTeamValue1-11,positionTeamValue2-58,positionTeamValue3-14,positionTeamValue4-7,positionTeamValue5-52,positionTeamValue6-60,positionTeamValue7-62,positionTeamValue8-54,positionTeamValue9-45,positionTeamValue10-41,');
 
 --
 -- Índices para tabelas despejadas
@@ -151,7 +151,7 @@ ALTER TABLE `team`
 -- AUTO_INCREMENT de tabela `player`
 --
 ALTER TABLE `player`
-  MODIFY `id_player` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_player` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT de tabela `team`
